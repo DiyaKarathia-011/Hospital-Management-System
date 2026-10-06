@@ -1,0 +1,142 @@
+.table-page {
+    padding: 30px;
+    background: #f5faff;
+    min-height: 100vh;
+}
+
+.table-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.table-card h2 {
+    margin-bottom: 15px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.custom-table thead {
+    background: #e3f2fd;
+}
+
+.custom-table th {
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+.custom-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-table tbody tr:hover {
+  background: #f9fbff;
+}
+
+.view-btn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #1976d2;
+}
+
+.empty {
+  margin-top: 15px;
+  text-align: center;
+  color: #777;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: transparent;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect */
+.add-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Click effect */
+.add-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pagination-summary {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e3a8a;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled),
+.page-btn.active {
+  background: #1976d2;
+  border-color: #1976d2;
+  color: #ffffff;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

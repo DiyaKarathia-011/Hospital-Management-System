@@ -1,0 +1,66 @@
+<div class="page">
+  <div class="profile-card" *ngIf="doctor">
+
+    <div class="header">
+      <div class="avatar">👨‍⚕️</div>
+      <div>
+        <h2>{{ doctor.fullName }}</h2>
+        <p class="sub">{{ doctor.specialization }}</p>
+      </div>
+    </div>
+
+    <div class="details-grid">
+
+      <div class="field">
+        <label>Doctor ID</label>
+        <input [(ngModel)]="doctor.doctorId" name="doctorId" readonly>
+      </div>
+
+      <div class="field">
+        <label>Gender</label>
+        <input [(ngModel)]="doctor.gender" name="gender">
+      </div>
+
+      <div class="field">
+        <label>Date of Birth</label>
+        <input type="date" [(ngModel)]="doctor.dateOfBirth" name="dateOfBirth">
+      </div>
+
+      <div class="field">
+        <label>Age</label>
+        <input [(ngModel)]="doctor.age" name="age">
+      </div>
+
+      <div class="field">
+        <label>Mobile</label>
+        <input [(ngModel)]="doctor.mobileNumber" name="mobileNumber">
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input [(ngModel)]="doctor.email" name="email">
+      </div>
+
+      <div class="field">
+        <label>Qualification</label>
+        <input [(ngModel)]="doctor.qualification" name="qualification">
+      </div>
+
+      <div class="field">
+        <label>Experience</label>
+        <input [(ngModel)]="doctor.experience" name="experience">
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+      <button class="edit-btn" (click)="update()">Edit</button>
+      <button class="delete-btn" (click)="delete()">Delete</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="!doctor">
+    <p>Loading doctor details...</p>
+  </div>
+</div>

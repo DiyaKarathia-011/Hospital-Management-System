@@ -1,0 +1,38 @@
+
+<div class="page">
+    <div class="form-container">
+        <form [formGroup]="staffForm" (ngSubmit)="submit()" class="form">
+
+            <input placeholder="Staff Id" formControlName="staffId" readonly/>
+
+            <select formControlName="role">
+                <option value="">Select Role</option>
+                <option [value]="r" *ngFor="let r of roles">{{r}}</option>
+            </select>
+
+            <input placeholder="fullName" formControlName="fullName">
+
+            <select formControlName="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input placeholder="Date of Birth" formControlName="dateOfBirth" type="date">
+
+            <input placeholder="Age" formControlName="age" readonly>
+
+            <input type="text" placeholder="Mobile Number" formControlName="mobileNumber">
+
+            <select formControlName="qualification">
+                <option value="">Select Qualification</option>
+                <option [value]="q" *ngFor="let q of qualifications">{{q}}</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="staffForm.invalid">Submit</button>
+
+
+        </form>
+    </div>
+</div>

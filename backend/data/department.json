@@ -1,0 +1,38 @@
+[
+  {
+    "departmentId": "DEP-452",
+    "departmentName": "General Medicine",
+    "description": "General diseases",
+    "id": 1
+  },
+  {
+    "departmentId": "DEP-631",
+    "departmentName": "ENT",
+    "description": "Treatment of ear, nose, and throat conditions",
+    "id": 2
+  },
+  {
+    "departmentId": "DEP-474",
+    "departmentName": "Cardiology",
+    "description": "Heart related treatments",
+    "id": 3
+  },
+  {
+    "departmentId": "DEP-578",
+    "departmentName": "Gynecology",
+    "description": "Women’s reproductive health and related issues",
+    "id": 4
+  },
+  {
+    "departmentId": "DEP-698",
+    "departmentName": "Ophthalmology",
+    "description": "Eye care, vision problems, and eye diseases",
+    "id": 5
+  },
+  {
+    "departmentId": "DEP-411",
+    "departmentName": "Orthopedics",
+    "description": "Treatment of bones, joints, and muscles",
+    "id": 6
+  }
+]

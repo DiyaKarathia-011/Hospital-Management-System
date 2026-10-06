@@ -1,0 +1,56 @@
+<div class="appointments-container">
+
+  <h2>My Appointments</h2>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <button (click)="filterType='ALL'">All</button>
+    <button (click)="filterType='TODAY'">Today</button>
+    <button (click)="filterType='UPCOMING'">Upcoming</button>
+    <button (click)="filterType='COMPLETED'">Completed</button>
+  </div>
+
+  <!-- TABLE -->
+  <table>
+    <thead>
+      <tr>
+        <th>Patient</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let appt of filteredAppointments">
+
+        <td>{{ appt.patientName }}</td>
+        <td>{{ appt.appointmentDate }}</td>
+        <td>{{ appt.appointmentTime }}</td>
+
+        <!-- STATUS -->
+        <td>
+          <span 
+            [ngClass]="{
+              'badge pending': appt.appointmentStatus === 'Scheduled',
+              'badge completed': appt.appointmentStatus === 'Completed'
+            }">
+            {{ appt.appointmentStatus }}
+          </span>
+        </td>
+
+        <!-- ACTION -->
+        <td>
+          <button 
+            *ngIf="appt.appointmentStatus !== 'Completed'"
+            (click)="markCompleted(appt)">
+            Complete
+          </button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>

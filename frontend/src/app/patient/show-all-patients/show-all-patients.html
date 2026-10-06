@@ -1,0 +1,58 @@
+<div class="table-page">
+  <div class="table-card">
+
+    <div class="header-row">
+      <h2>Patient List</h2>
+      <button class="add-btn" (click)="addPatient()">Add New Patient</button>
+    </div>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th> 
+          <th>Name</th>  
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Mobile</th> 
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of paginatedPatients; trackBy: trackById">
+          <td>{{ p.id }}</td> 
+          <td>{{ p.fullName }}</td>  
+          <td>{{ p.gender }}</td>
+          <td>{{ p.age }}</td>    
+          <td>{{ p.mobileNumber }}</td> 
+          <td>
+            <button class="view-btn" (click)="editPatient(p.id)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="patientsList.length === 0" class="empty">
+      No patients found
+    </p>
+
+    <div class="pagination" *ngIf="patientsList.length > 0">
+      <p class="pagination-summary">
+        Showing {{ startItem }}-{{ endItem }} of {{ patientsList.length }} patients
+      </p>
+      <div class="pagination-controls">
+        <button class="page-btn" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <button
+          class="page-btn page-number"
+          *ngFor="let page of pageNumbers"
+          (click)="goToPage(page)"
+          [class.active]="page === currentPage"
+        >
+          {{ page }}
+        </button>
+        <button class="page-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+    </div>
+
+  </div>
+</div>

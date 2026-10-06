@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "fullName": "Riya Sharma",
+    "gender": "Female",
+    "dateOfBirth": "1995-06-15",
+    "age": 30,
+    "bloodGroup": "O+",
+    "mobileNumber": "8973568789",
+    "address": "123, MG Road, Ahemdabad, Gujarat"
+  },
+  {
+    "id": 2,
+    "fullName": "Priya Patel",
+    "gender": "Female",
+    "dateOfBirth": "1998-11-22",
+    "age": 26,
+    "bloodGroup": "A+",
+    "mobileNumber": "9123456780",
+    "address": "45, Nehru Nagar, Surat, Gujarat, India"
+  },
+  {
+    "id": 3,
+    "fullName": "Amit Verma",
+    "gender": "Male",
+    "dateOfBirth": "1987-03-09",
+    "age": 38,
+    "bloodGroup": "B+",
+    "mobileNumber": "9012345678",
+    "address": "78, Civil Lines, Jaipur, Rajasthan, India"
+  },
+  {
+    "id": 4,
+    "fullName": "Sneha Desai",
+    "gender": "Female",
+    "dateOfBirth": "2001-01-18",
+    "age": 24,
+    "bloodGroup": "AB-",
+    "mobileNumber": "9988776655",
+    "address": "12, Ring Road, Vadodara, Gujarat, India"
+  },
+  {
+    "id": 5,
+    "fullName": "Tom",
+    "gender": "Female",
+    "dateOfBirth": "2005-03-22",
+    "age": 20,
+    "bloodGroup": "B+",
+    "mobileNumber": "6778984532",
+    "address": "23,Manjalpur, Vadodara"
+  },
+  {
+    "id": 6,
+    "fullName": "Tanya shah",
+    "gender": "Female",
+    "dateOfBirth": "2000-02-03",
+    "age": 25,
+    "bloodGroup": "B-",
+    "mobileNumber": "8778584532",
+    "address": "123, Ring Road, Vadodara, Gujarat, India"
+  },
+  {
+    "id": 7,
+    "fullName": "Karan",
+    "gender": "Male",
+    "dateOfBirth": "2004-07-20",
+    "age": 21,
+    "bloodGroup": "B+",
+    "mobileNumber": "6778983490",
+    "address": "34, MG Road, Surat, Gujarat"
+  },
+  {
+    "id": 8,
+    "fullName": "Suman Joshi",
+    "gender": "Female",
+    "dateOfBirth": "2000-05-03",
+    "age": 25,
+    "bloodGroup": "AB+",
+    "mobileNumber": "9869283746",
+    "address": "76, Ring Road, Vadodara, Gujarat, India"
+  },
+  {
+    "id": 9,
+    "fullName": "Virat",
+    "gender": "Male",
+    "dateOfBirth": "1995-07-29",
+    "age": 30,
+    "bloodGroup": "B-",
+    "mobileNumber": "8890004435",
+    "address": "Kalawad Road, Rajkot, Gujarat"
+  },
+  {
+    "id": 10,
+    "fullName": "Ritika Patel",
+    "gender": "Female",
+    "dateOfBirth": "2002-07-14",
+    "age": 22,
+    "bloodGroup": "B-",
+    "mobileNumber": "9876543210",
+    "address": "Navrangpura, Ahmedabad, Gujarat"
+  },
+  {
+    "id": 11,
+    "fullName": "Vivek ",
+    "gender": "Male",
+    "dateOfBirth": "1974-09-22",
+    "age": 51,
+    "bloodGroup": "O+",
+    "mobileNumber": "7483900213",
+    "address": "Alkapuri, Vadodara, Gujarat"
+  },
+  {
+    "id": 12,
+    "fullName": "Soham",
+    "gender": "Male",
+    "dateOfBirth": "1962-02-19",
+    "age": 63,
+    "bloodGroup": "O+",
+    "mobileNumber": "6894093483",
+    "address": "Vadodara, Gujarat"
+  },
+  {
+    "fullName": "Shailesh",
+    "gender": "Male",
+    "dateOfBirth": "1976-09-20",
+    "age": 49,
+    "bloodGroup": "AB+",
+    "mobileNumber": "6478897654",
+    "address": "Vadodara, Gujarat",
+    "id": 13
+  },
+  {
+    "fullName": "Tommy",
+    "gender": "Male",
+    "dateOfBirth": "1965-01-03",
+    "age": 61,
+    "bloodGroup": "AB+",
+    "mobileNumber": "7483900200",
+    "address": "Surat",
+    "id": 14
+  }
+]

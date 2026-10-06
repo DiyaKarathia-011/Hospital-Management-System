@@ -1,0 +1,139 @@
+/* Page Layout */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #e3f2fd, #f5faff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Card */
+.profile-card {
+  width: 650px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  font-size: 40px;
+  background: #e3f2fd;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.sub {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Fields */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.field input,
+.field select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33,150,243,0.3);
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+/* Status Badge */
+.status-box {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* Status Colors */
+.scheduled {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.cancelled {
+  background: #fdecea;
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}

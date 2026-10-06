@@ -1,0 +1,30 @@
+
+<div class="page">
+    <div class="form-container">
+        <form [formGroup]="patientForm" (ngSubmit)="submitForm()">
+            <!-- <input type="text" formControlName="id" placeholder="Patients ID" class="form-control" id="exampleInputID"> -->
+
+            <input type="text" formControlName="fullName" placeholder="Enter FullName" class="form-control" id="exampleInputFullName">
+
+            <select formControlName="gender" id="gender" class="form-control">
+                <option value="">Gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" formControlName="dateOfBirth" placeholder="Enter DateOfBirth" class="form-control" id="exampleInputDob">
+
+            <input type="number" formControlName="age" placeholder="Enter Age" class="form-control" id="exampleInputAge" readonly>
+
+            <input type="text" formControlName="bloodGroup" placeholder="BloodGroup" class="form-control" id="exampleInputBloodGroup">
+
+            <input type="text" formControlName="mobileNumber" placeholder="Enter MobileNumber" class="form-control" id="exampleInputMobileNumber">
+
+            <textarea formControlName="address" id="address" placeholder="Enter Address" class="form-control" id="exampleInputAddress"></textarea>
+
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="patientForm.invalid">Submit</button>
+            
+        </form>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="page">
+  <div class="profile-card" *ngIf="staff">
+
+    <h2>Staff Details</h2>
+
+    <div class="details-grid">
+
+      <div class="field">
+        <label>Staff ID</label>
+        <input [(ngModel)]="staff.staffId" name="staffId" readonly>
+      </div>
+
+      <div class="field">
+        <label>Full Name</label>
+        <input [(ngModel)]="staff.fullName" name="fullName">
+      </div>
+
+      <div class="field">
+        <label>Gender</label>
+        <input [(ngModel)]="staff.gender" name="gender">
+      </div>
+
+      <div class="field">
+        <label>Date of Birth</label>
+        <input [(ngModel)]="staff.dateOfBirth" name="dateOfBirth" type="date">
+      </div>
+
+      <div class="field">
+        <label>Age</label>
+        <input [(ngModel)]="staff.age" name="age">
+      </div>
+
+      <div class="field">
+        <label>Mobile</label>
+        <input [(ngModel)]="staff.mobileNumber" name="mobileNumber">
+      </div>
+
+      <div class="field">
+        <label>Role</label>
+        <input [(ngModel)]="staff.role" name="role">
+      </div>
+
+      <div class="field">
+        <label>Qualification</label>
+        <input [(ngModel)]="staff.qualification" name="qualification">
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+      <button class="edit-btn" (click)="update()">Edit</button>
+      <button class="delete-btn" (click)="delete()">Delete</button>
+    </div>
+
+  </div>
+</div>

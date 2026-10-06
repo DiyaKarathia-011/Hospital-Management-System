@@ -1,0 +1,101 @@
+<!-- HEADER (Row 1) -->
+<header class="header">
+    <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-core"></span>
+            <span class="brand-mark-cross"></span>
+        </div>
+        <div class="brand-copy">
+            <span class="brand-name">MediCore</span>
+            <span class="brand-tagline">Hospital management dashboard</span>
+        </div>
+    </div>
+    <div class="header-actions">
+        <div class="header-search">
+            <div class="header-search-input">
+                <span class="header-search-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="header-search-icon-svg">
+                        <circle cx="11" cy="11" r="6"></circle>
+                        <path d="m20 20-4.2-4.2"></path>
+                    </svg>
+                </span>
+                <input
+                    type="text"
+                    placeholder="Search patients, doctors, staff..."
+                    [(ngModel)]="searchQuery"
+                    (input)="onSearchInput()"
+                    (focus)="isSearchDropdownOpen = searchQuery.trim().length > 0"
+                />
+                <span class="header-search-spinner" *ngIf="isSearchLoading" aria-hidden="true"></span>
+            </div>
+
+            <div class="header-search-dropdown" *ngIf="isSearchDropdownOpen">
+                <div class="header-search-state" *ngIf="isSearchLoading">Searching...</div>
+
+                <ng-container *ngIf="!isSearchLoading && hasSearchResults">
+                    <div class="header-search-group" *ngIf="patientResults.length > 0">
+                        <p class="header-search-title">Patients</p>
+                        <button class="header-search-result" *ngFor="let result of patientResults" (click)="navigateFromSearch(result)">
+                            <div class="header-search-result-main">
+                                <span class="header-search-name" [innerHTML]="highlightMatch(result.name)"></span>
+                                <span class="header-result-badge" [ngClass]="result.badgeClass">{{ result.label }}</span>
+                            </div>
+                            <span class="header-search-extra" [innerHTML]="highlightMatch(result.extra)"></span>
+                        </button>
+                    </div>
+
+                    <div class="header-search-group" *ngIf="doctorResults.length > 0">
+                        <p class="header-search-title">Doctors</p>
+                        <button class="header-search-result" *ngFor="let result of doctorResults" (click)="navigateFromSearch(result)">
+                            <div class="header-search-result-main">
+                                <span class="header-search-name" [innerHTML]="highlightMatch(result.name)"></span>
+                                <span class="header-result-badge" [ngClass]="result.badgeClass">{{ result.label }}</span>
+                            </div>
+                            <span class="header-search-extra" [innerHTML]="highlightMatch(result.extra)"></span>
+                        </button>
+                    </div>
+
+                    <div class="header-search-group" *ngIf="staffResults.length > 0">
+                        <p class="header-search-title">Staff</p>
+                        <button class="header-search-result" *ngFor="let result of staffResults" (click)="navigateFromSearch(result)">
+                            <div class="header-search-result-main">
+                                <span class="header-search-name" [innerHTML]="highlightMatch(result.name)"></span>
+                                <span class="header-result-badge" [ngClass]="result.badgeClass">{{ result.label }}</span>
+                            </div>
+                            <span class="header-search-extra" [innerHTML]="highlightMatch(result.extra)"></span>
+                        </button>
+                    </div>
+                </ng-container>
+
+                <div class="header-search-state" *ngIf="!isSearchLoading && searchInitialized && !hasSearchResults">
+                    No results found
+                </div>
+            </div>
+        </div>
+
+        <button class="logout-btn" (click)="logOut()">Logout</button>
+    </div>
+</header>
+
+<!-- NAVBAR (Row 2) -->
+<!-- Admin nav -->
+<nav class="navbar" *ngIf="role === 'ADMIN'">
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/showallpatients" routerLinkActive="active">Patients</a>
+    <a routerLink="/doctors" routerLinkActive="active">Doctors</a>
+    <a routerLink="/staff" routerLinkActive="active">Staff</a>
+    <a routerLink="/departments" routerLinkActive="active">Departments</a>
+    <a routerLink="/appointments" routerLinkActive="active">Appointments</a>
+</nav>
+
+<!-- Doctor nav -->
+<nav class="navbar" *ngIf="role === 'DOCTOR'">
+  <a routerLink="/doctor/dashboard">Dashboard</a>
+  <a routerLink="/doctor/appointments">Appointments</a>
+  <a routerLink="/doctor/patients">Patients</a>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+    <router-outlet></router-outlet>
+</div>

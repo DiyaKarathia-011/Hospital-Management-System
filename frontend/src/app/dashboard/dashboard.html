@@ -1,0 +1,196 @@
+<div class="dashboard">
+  <div class="stats-grid">
+    <div class="card metric-card patients-card">
+      <div class="metric-top">
+        <div>
+          <p class="metric-label">Total Patients</p>
+          <h2>{{totalPatients}}</h2>
+        </div>
+        <span class="metric-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="metric-icon-svg">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M5 19c0-3.2 3.1-5 7-5s7 1.8 7 5"></path>
+          </svg>
+        </span>
+      </div>
+      <p class="metric-footnote">Registered patient records</p>
+    </div>
+
+    <div class="card metric-card doctors-card">
+      <div class="metric-top">
+        <div>
+          <p class="metric-label">Total Doctors</p>
+          <h2>{{totalDoctors}}</h2>
+        </div>
+        <span class="metric-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="metric-icon-svg">
+            <path d="M8 5v4a4 4 0 0 0 8 0V5"></path>
+            <path d="M10 5V3"></path>
+            <path d="M14 5V3"></path>
+            <path d="M12 13v2a4 4 0 1 0 4 4"></path>
+            <circle cx="18" cy="19" r="2"></circle>
+          </svg>
+        </span>
+      </div>
+      <p class="metric-footnote">Doctors available in the system</p>
+    </div>
+
+    <div class="card metric-card staff-card">
+      <div class="metric-top">
+        <div>
+          <p class="metric-label">Total Staff</p>
+          <h2>{{totalStaff}}</h2>
+        </div>
+        <span class="metric-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="metric-icon-svg">
+            <circle cx="8" cy="9" r="3"></circle>
+            <circle cx="16" cy="9" r="3"></circle>
+            <path d="M3.5 18c0-2.3 2.1-3.8 4.5-3.8S12.5 15.7 12.5 18"></path>
+            <path d="M11.5 18c0-2.3 2.1-3.8 4.5-3.8s4.5 1.5 4.5 3.8"></path>
+          </svg>
+        </span>
+      </div>
+      <p class="metric-footnote">Support and operations team</p>
+    </div>
+  </div>
+
+  <div class="stats-grid wide">
+    <div class="card metric-card appointments-card">
+      <div class="metric-top">
+        <div>
+          <p class="metric-label">Total Appointments</p>
+          <h2>{{totalAppointments}}</h2>
+        </div>
+        <span class="metric-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="metric-icon-svg">
+            <rect x="4" y="6" width="16" height="14" rx="3"></rect>
+            <path d="M8 4v4"></path>
+            <path d="M16 4v4"></path>
+            <path d="M4 10h16"></path>
+            <path d="m9 14 2 2 4-4"></path>
+          </svg>
+        </span>
+      </div>
+      <p class="metric-footnote">Scheduled hospital visits</p>
+    </div>
+
+    <div class="card metric-card departments-card">
+      <div class="metric-top">
+        <div>
+          <p class="metric-label">Total Departments</p>
+          <h2>{{totalDepartments}}</h2>
+        </div>
+        <span class="metric-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="metric-icon-svg">
+            <path d="M5 20V7l7-3 7 3v13"></path>
+            <path d="M9 20v-4h6v4"></path>
+            <path d="M9 10h.01"></path>
+            <path d="M15 10h.01"></path>
+            <path d="M9 13h.01"></path>
+            <path d="M15 13h.01"></path>
+          </svg>
+        </span>
+      </div>
+      <p class="metric-footnote">Clinical and service departments</p>
+    </div>
+  </div>
+
+  <div class="insights-grid">
+    <div class="insight-card">
+      <div class="insight-header">
+        <div>
+          <p class="insight-kicker">Latest admissions</p>
+          <h3>Recently Added Patients</h3>
+        </div>
+        <button class="insight-link" (click)="viewAllPatients()">View All</button>
+      </div>
+
+      <div class="insight-list" *ngIf="recentPatients.length > 0; else noRecentPatients">
+        <div class="insight-row" *ngFor="let patient of recentPatients">
+          <div class="row-primary">
+            <span class="patient-avatar">{{ getPatientAvatar(patient) }}</span>
+            <div>
+              <p class="row-title">{{ patient.fullName }}</p>
+              <p class="row-subtitle">Age {{ patient.age }}</p>
+            </div>
+          </div>
+          <p class="row-meta">{{ formatPatientAddedDate(patient) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-header">
+        <div>
+          <p class="insight-kicker">Activity timeline</p>
+          <h3>Recent Appointments</h3>
+        </div>
+      </div>
+
+      <div class="insight-list" *ngIf="recentAppointments.length > 0; else noRecentAppointments">
+        <div class="insight-row appointment-row" *ngFor="let appointment of recentAppointments">
+          <div>
+            <p class="row-title">{{ appointment.patientName }}</p>
+            <p class="row-subtitle">{{ appointment.doctor }}</p>
+          </div>
+          <div class="appointment-meta">
+            <p class="row-meta">{{ appointment.appointmentTime }}</p>
+            <span class="status-badge" [ngClass]="getStatusClass(appointment.appointmentStatus)">
+              {{ appointment.appointmentStatus }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="chart-header">
+      <div>
+        <p class="chart-kicker">Live count chart</p>
+        <h2>Hospital activity snapshot</h2>
+      </div>
+      <div class="chart-total">
+        <span>Total records</span>
+        <strong>{{ totalEntities }}</strong>
+      </div>
+    </div>
+
+    <div class="chart-shell">
+      <div class="chart-axis">
+        <span>{{ chartMaxValue }}</span>
+        <span>{{ chartMaxValue / 2 | number:'1.0-0' }}</span>
+        <span>0</span>
+      </div>
+
+      <div class="chart-bars" aria-label="Dashboard totals chart" role="img">
+        <div class="bar-group" *ngFor="let metric of chartMetrics">
+          <span class="bar-value">{{ metric.value }}</span>
+          <div
+            class="bar-fill"
+            [style.height.px]="getBarHeight(metric.value)"
+            [style.background]="metric.color"
+            [attr.aria-label]="metric.label + ' ' + metric.value"
+          ></div>
+          <span class="bar-label">{{ metric.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-legend">
+      <div class="legend-item" *ngFor="let metric of chartMetrics">
+        <span class="legend-swatch" [style.background]="metric.color"></span>
+        <span>{{ metric.label }}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #noRecentPatients>
+  <div class="empty-card-state">No recent patients available</div>
+</ng-template>
+
+<ng-template #noRecentAppointments>
+  <div class="empty-card-state">No recent appointments available</div>
+</ng-template>

@@ -1,0 +1,131 @@
+/* Page Background */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #e3f2fd, #f5faff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 0;
+}
+
+/* Main Card */
+.profile-card {
+  width: 750px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Avatar Icon */
+.avatar {
+  font-size: 40px;
+  background: #e3f2fd;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+/* Name */
+.header h2 {
+  margin: 0;
+}
+
+/* Specialization */
+.sub {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Grid Layout */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Field Wrapper */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.field label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.field input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Input Focus Effect */
+.field input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+/* Button Container */
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background: #2196f3;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+/* Delete Button (Orange - softer than red) */
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #e68900;
+}
+
+/* Responsive (Mobile Friendly) */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}

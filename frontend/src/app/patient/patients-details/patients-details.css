@@ -1,0 +1,148 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #e3f2fd, #f5faff);
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  padding: 30px;
+}
+
+.profile-card {
+  width: 700px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.field input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.field input:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 4px rgba(33,150,243,0.3);
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+/* Patient Visits Section */
+.patient-visits {
+  margin-top: 30px;
+  width: 700px;
+}
+
+/* Visit Card */
+.visit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+
+/* Table */
+.visit-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Table Header */
+.visit-card th {
+  text-align: left;
+  padding: 12px;
+  background: #e3f2fd;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #bbdefb;
+}
+
+/* Table Rows */
+.visit-card td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+/* Hover Effect */
+.visit-card tbody tr:hover {
+  background: #f5faff;
+}
+
+/* Zebra Striping (optional but nice) */
+.visit-card tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Responsive (optional) */
+@media (max-width: 768px) {
+  .visit-card table {
+    font-size: 12px;
+  }
+
+  .visit-card th,
+  .visit-card td {
+    padding: 8px;
+  }
+}

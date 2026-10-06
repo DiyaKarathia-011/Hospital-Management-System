@@ -1,0 +1,156 @@
+[
+  {
+    "staffId": "STF-230",
+    "fullName": "Riha",
+    "gender": "Female",
+    "dateOfBirth": "1980-08-20",
+    "age": 45,
+    "mobileNumber": "8776787663",
+    "role": "Nurse",
+    "qualification": "B.Sc Nursing",
+    "id": 1
+  },
+  {
+    "staffId": "STF-655",
+    "fullName": "Priya Sharma ",
+    "gender": "Female",
+    "dateOfBirth": "1987-07-11",
+    "age": 38,
+    "mobileNumber": "9123456780",
+    "role": "Receptionist",
+    "qualification": "Graduate",
+    "id": 2
+  },
+  {
+    "staffId": "STF-371",
+    "fullName": "Amit Patel",
+    "gender": "Male",
+    "dateOfBirth": "1999-09-22",
+    "age": 26,
+    "mobileNumber": "9012345678",
+    "role": "Pharmacist",
+    "qualification": "B.Pharm",
+    "id": 3
+  },
+  {
+    "staffId": "STF-344",
+    "fullName": "Neha Verma",
+    "gender": "Female",
+    "dateOfBirth": "1985-04-30",
+    "age": 40,
+    "mobileNumber": "9988776655",
+    "role": "Lab Technician",
+    "qualification": "BMLT",
+    "id": 4
+  },
+  {
+    "staffId": "STF-511",
+    "fullName": "Mahesh Yadav",
+    "gender": "Male",
+    "dateOfBirth": "1984-08-14",
+    "age": 41,
+    "mobileNumber": "9001234567",
+    "role": "Security",
+    "qualification": "12th Pass",
+    "id": 5
+  },
+  {
+    "staffId": "STF-218",
+    "fullName": "Rahul varma ",
+    "gender": "Male",
+    "dateOfBirth": "1988-07-05",
+    "age": 37,
+    "mobileNumber": "9885746378",
+    "role": "Peon",
+    "qualification": "12th Pass",
+    "id": 6
+  },
+  {
+    "staffId": "STF-672",
+    "fullName": "Riya Desai",
+    "gender": "Female",
+    "dateOfBirth": "1993-06-22",
+    "age": 32,
+    "mobileNumber": "9012345670",
+    "role": "Nurse",
+    "qualification": "ANM",
+    "id": 7
+  },
+  {
+    "staffId": "STF-586",
+    "fullName": "Kavita Sharma",
+    "gender": "Female",
+    "dateOfBirth": "1996-07-04",
+    "age": 29,
+    "mobileNumber": "9123456709",
+    "role": "Nurse",
+    "qualification": "B.Sc Nursing",
+    "id": 8
+  },
+  {
+    "staffId": "STF-979",
+    "fullName": "Rakesh Kumar",
+    "gender": "Male",
+    "dateOfBirth": "1992-05-14",
+    "age": 33,
+    "mobileNumber": "9876501111",
+    "role": "Lab Technician",
+    "qualification": "BMLT",
+    "id": 9
+  },
+  {
+    "staffId": "STF-432",
+    "fullName": "Ramesh Chauhan",
+    "gender": "Male",
+    "dateOfBirth": "1994-08-19",
+    "age": 31,
+    "mobileNumber": "9001201111",
+    "role": "Security",
+    "qualification": "Graduate",
+    "id": 10
+  },
+  {
+    "staffId": "STF-872",
+    "fullName": "Rajesh Kumar",
+    "gender": "Male",
+    "dateOfBirth": "1987-02-08",
+    "age": 39,
+    "mobileNumber": "9123403333",
+    "role": "Peon",
+    "qualification": "12th Pass",
+    "id": 11
+  },
+  {
+    "staffId": "STF-606",
+    "fullName": "Jiyan",
+    "gender": "Male",
+    "dateOfBirth": "1988-08-23",
+    "age": 37,
+    "mobileNumber": "8373665368",
+    "role": "Peon",
+    "qualification": "12th Pass",
+    "id": 12
+  },
+  {
+    "staffId": "STF-244",
+    "fullName": "Nisha Verma",
+    "gender": "Female",
+    "dateOfBirth": "1990-11-28",
+    "age": 35,
+    "mobileNumber": "8973673789",
+    "role": "Pharmacist",
+    "qualification": "B.Pharm",
+    "id": 13
+  },
+  {
+    "staffId": "STF-358",
+    "fullName": "Rohti Verma",
+    "gender": "Male",
+    "dateOfBirth": "1980-04-20",
+    "age": 45,
+    "mobileNumber": "7584903476",
+    "role": "Nurse",
+    "qualification": "B.Sc Nursing",
+    "id": 14
+  }
+]

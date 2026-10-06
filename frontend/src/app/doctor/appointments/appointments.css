@@ -1,0 +1,74 @@
+.appointments-container {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* FILTERS */
+.filters {
+  margin-bottom: 15px;
+}
+
+.filters button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #2d6cdf;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #1e4fbf;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #f4f6f9;
+}
+
+/* STATUS BADGES */
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.pending {
+  background: #ffeaa7;
+  color: #b7791f;
+}
+
+.completed {
+  background: #c8f7c5;
+  color: #2d7a2d;
+}
+
+/* BUTTON */
+button {
+  padding: 5px 10px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e7e34;
+}

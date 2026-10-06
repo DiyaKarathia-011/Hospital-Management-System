@@ -1,0 +1,93 @@
+[
+  {
+    "appointmentId": "API-786",
+    "patientName": "Riya Sharma",
+    "department": "General Medicine",
+    "doctor": "kiya Sharma",
+    "doctorId": 1,
+    "appointmentDate": "2026-03-17",
+    "appointmentTime": "16:15",
+    "consultationType": "New",
+    "appointmentStatus": "Completed",
+    "paymentStatus": "Paid",
+    "id": 1
+  },
+  {
+    "appointmentId": "API-672",
+    "patientName": "Amit Verma",
+    "department": "ENT",
+    "doctor": "Aarav Sharma",
+    "doctorId": 3,
+    "appointmentDate": "2026-03-16",
+    "appointmentTime": "16:16",
+    "consultationType": "New",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "Pending",
+    "id": 2
+  },
+  {
+    "appointmentId": "API-707",
+    "patientName": "Sneha Desai",
+    "department": "ENT",
+    "doctor": "Aarav Sharma",
+    "doctorId": 3,
+    "appointmentDate": "2026-04-06",
+    "appointmentTime": "16:32",
+    "consultationType": "New",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "pending",
+    "id": 3
+  },
+  {
+    "appointmentId": "API-223",
+    "patientName": "Karan",
+    "department": "General Medicine",
+    "doctor": "kiya Sharma",
+    "appointmentDate": "2026-04-27",
+    "appointmentTime": "13:20",
+    "consultationType": "New",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "pending",
+    "doctorId": 1,
+    "id": 4
+  },
+  {
+    "appointmentId": "API-322",
+    "patientName": "Sneha Desai",
+    "department": "ENT",
+    "doctor": "Aarav Sharma",
+    "appointmentDate": "2026-04-27",
+    "appointmentTime": "14:20",
+    "consultationType": "New",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "pending",
+    "doctorId": 3,
+    "id": 5
+  },
+  {
+    "appointmentId": "API-894",
+    "patientName": "Vivek ",
+    "department": "General Medicine",
+    "doctor": "kiya Sharma",
+    "appointmentDate": "2026-04-28",
+    "appointmentTime": "12:18",
+    "consultationType": "New",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "pending",
+    "doctorId": 1,
+    "id": 6
+  },
+  {
+    "appointmentId": "API-159",
+    "patientName": "Amit Verma",
+    "department": "General Medicine",
+    "doctor": "Kiya Sharma",
+    "appointmentDate": "2026-06-04",
+    "appointmentTime": "12:00",
+    "consultationType": "Follow-up",
+    "appointmentStatus": "Scheduled",
+    "paymentStatus": "pending",
+    "doctorId": 1,
+    "id": 7
+  }
+]

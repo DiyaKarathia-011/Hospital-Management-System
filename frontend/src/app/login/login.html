@@ -1,0 +1,48 @@
+<div class="login-container">
+
+  <!-- LEFT IMAGE SECTION -->
+  <div class="login-image"></div>
+
+  <!-- RIGHT FORM SECTION -->
+  <div class="login-form-wrapper">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" class="login-form">
+
+      <h2>Login to continue</h2>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Username</label>
+        <input 
+          type="text" 
+          formControlName="username" 
+          placeholder="Enter username"
+        >
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label>Password</label>
+        <input 
+          type="text" 
+          formControlName="password" 
+          placeholder="Enter password"
+        >
+      </div>
+      
+      <!-- Button -->
+      <button type="submit" class="login-btn" [disabled]="loginForm.invalid">
+        LOGIN
+      </button>
+
+      <!-- error message -->
+    <p class="error" *ngIf="errorMessage">
+        {{ errorMessage }}
+    </p>
+
+    </form>
+  </div>
+
+</div>
+
+
+

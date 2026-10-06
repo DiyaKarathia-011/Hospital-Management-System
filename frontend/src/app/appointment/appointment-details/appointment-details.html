@@ -1,0 +1,69 @@
+<div class="page">
+
+  <div class="profile-card" *ngIf="appointment">
+
+    <div class="header">
+      <div class="avatar">📅</div>
+      <div>
+        <h2>{{ appointment.patientName }}</h2>
+        <p class="sub">{{ appointment.department }}</p>
+      </div>
+    </div>
+
+    <div class="details-grid">
+
+      <div class="field">
+        <label>Appointment ID</label>
+        <input [(ngModel)]="appointment.appointmentId" name="appointmentId" readonly>
+      </div>
+
+      <div class="field">
+        <label>Date</label>
+        <input type="date" [(ngModel)]="appointment.appointmentDate" name="appointmentDate">
+      </div>
+
+      <div class="field">
+        <label>Time</label>
+        <input type="time" [(ngModel)]="appointment.appointmentTime" name="appointmentTime">
+      </div>
+
+      <div class="field">
+        <label>Department</label>
+        <input [(ngModel)]="appointment.department" name="department">
+      </div>
+
+      <div class="field">
+        <label>Doctor</label>
+        <input [(ngModel)]="appointment.doctor" name="doctor">
+      </div>
+
+      <div class="field">
+        <label>Status</label>
+        <select [(ngModel)]="appointment.appointmentStatus" name="appointmentStatus">
+          <option>Scheduled</option>
+          <option>Completed</option>
+          <option>Cancelled</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Payment</label>
+        <select [(ngModel)]="appointment.paymentStatus" name="paymentStatus">
+          <option>Pending</option>
+          <option>Paid</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+      <button class="edit-btn" (click)="update()">Update</button>
+    </div>
+
+  </div>
+
+  <div *ngIf="!appointment">
+    <p>Loading appointment details...</p>
+  </div>
+
+</div>

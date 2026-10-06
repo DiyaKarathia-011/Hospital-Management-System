@@ -1,0 +1,42 @@
+<router-outlet></router-outlet>
+<div class="staff-container">
+  <div class="staff-grid">
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Nurse']">
+      <img src="assets/nurse.png" alt="nurse">
+      <h3>Nurse</h3>
+      <p>{{staffCount?.Nurse}}</p>
+    </div>
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Receptionist']">
+      <img src="assets/receptionist.jpg" alt="receptionist">
+      <h3>Receptionist</h3>
+      <p>{{staffCount?.Receptionist}}</p>
+    </div>
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Pharmacist']">
+      <img src="assets/pharmacist.png" alt="pharmacist">
+      <h3>Pharmacist</h3>
+      <p>{{staffCount?.Pharmacist}}</p>
+    </div>
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Lab Technician']">
+      <img src="assets/lab.png" alt="lab">
+      <h3>Lab Technician</h3>
+      <p>{{staffCount?.LabTechnician}}</p>
+    </div>
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Security']">
+      <img src="assets/security.png" alt="security">
+      <h3>Security</h3>
+      <p>{{staffCount?.Security}}</p>
+    </div>
+
+    <div class="staff-card" [routerLink]="['/staffList', 'Peon']">
+      <img src="assets/peon.png" alt="peon">
+      <h3>Peon</h3>
+      <p>{{staffCount?.Peon}}</p>
+    </div>
+
+  </div>
+</div>

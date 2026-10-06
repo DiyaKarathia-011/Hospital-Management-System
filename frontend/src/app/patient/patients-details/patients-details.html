@@ -1,0 +1,76 @@
+<div class="page">
+  <div class="profile-card" *ngIf="patient">
+
+    <h2>Personal Details</h2>
+
+    <div class="details-grid">
+
+      <div class="field">
+        <label>Full Name</label>
+        <input [(ngModel)]="patient.fullName" name="fullName">
+      </div>
+
+      <div class="field">
+        <label>Gender</label>
+        <input [(ngModel)]="patient.gender" name="gender">
+      </div>
+
+      <div class="field">
+        <label>Age</label>
+        <input [(ngModel)]="patient.age" name="age">
+      </div>
+
+      <div class="field">
+        <label>Mobile</label>
+        <input [(ngModel)]="patient.mobileNumber" name="mobileNumber">
+      </div>
+
+      <div class="field">
+        <label>Blood Group</label>
+        <input [(ngModel)]="patient.bloodGroup" name="bloodGroup">
+      </div>
+
+      <div class="field full-width">
+        <label>Address</label>
+        <input [(ngModel)]="patient.address" name="address">
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+      <button class="edit-btn" (click)="update()">Edit</button>
+      <button class="delete-btn" (click)="delete()">Delete</button>
+    </div>
+
+  </div>
+
+  <div class="patient-visits">
+  <h2>Patient Visits</h2>
+  <div class="visit-card" >
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Doctor</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let visit of patientVisits">
+          <td>{{ visit.appointmentDate }}</td>
+          <td>{{ visit.appointmentTime }}</td>
+          <td>{{ visit.doctor }}</td>
+          <td>{{ visit.department }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> 
+
+  <div *ngIf="!patient">
+    <p>Loading patient details...</p>
+  </div>
+</div>
+
+

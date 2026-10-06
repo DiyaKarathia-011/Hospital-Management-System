@@ -1,0 +1,67 @@
+/* Page */
+.page {
+  padding: 40px;
+  background: linear-gradient(to right, #f5faff, #eef6ff);
+  min-height: 100vh;
+}
+
+/* Title */
+.title {
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Accent line */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(to right, #2196f3, #64b5f6);
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+/* Description */
+.card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}

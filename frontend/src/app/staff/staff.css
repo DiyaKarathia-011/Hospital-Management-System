@@ -1,0 +1,51 @@
+.staff-container {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* FIXED 2 cards per row */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.staff-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Hover */
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.staff-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.staff-card h3 {
+  margin: 10px 0 5px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+/* Count */
+.staff-card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+}

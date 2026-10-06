@@ -1,0 +1,60 @@
+<div class="page">
+    <div class="form-container">
+
+        <form [formGroup]="appointmentForm" (ngSubmit)="submit()" class="form">
+
+            <input formControlName="appointmentId" readonly />
+
+
+            <select formControlName="patientName">
+                <option value="">Select Patient</option>
+                <option *ngFor="let p of patient" [value]="p.fullName">{{p.fullName}}</option>
+            </select>
+
+            <select formControlName="department">
+                <option value="">Select Department</option>
+                <!-- <option value="General Medicine">General Medicine</option>
+                <option value="ENT">ENT</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Gynecology">Gynecology</option>
+                <option value="Ophthalmology">Ophthalmology</option>
+                <option value="Orthopedics">Orthopedics</option> -->
+                <option *ngFor="let d of departments" [value]="d">{{ d }}</option>
+            </select>
+
+            <select formControlName="doctor" (change)="onDoctorSelect($event)">
+                <option value="">Select Doctor</option>
+                <option *ngFor="let doc of doctors" [value]="doc.id">
+                    {{ doc.fullName }}
+                </option>
+            </select>
+
+            <input type="date" formControlName="appointmentDate">
+
+            <input type="time" formControlName="appointmentTime">
+
+            <select formControlName="consultationType">
+                <option value="">Select Type</option>
+                <option>New</option>
+                <option>Follow-up</option>
+            </select>
+
+            <select formControlName="appointmentStatus">
+                <option value="">Appointment Status</option>
+                <option value="Scheduled">Scheduled</option>
+            </select>
+
+
+            <select formControlName="paymentStatus">
+                <option value="">Payment Status</option>
+                <option value="pending">Pending</option>
+            </select>
+
+
+            <button class="btn btn-primary submit-btn" type="submit" [disabled]="appointmentForm.invalid">
+                Submit
+            </button>
+
+        </form>
+    </div>
+</div>

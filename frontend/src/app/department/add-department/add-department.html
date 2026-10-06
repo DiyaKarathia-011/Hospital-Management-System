@@ -1,0 +1,15 @@
+
+<div class="page">
+    <div class="form-container">
+        <form [formGroup]="addDepartment" (ngSubmit)="submit()" class="form">
+
+            <input placeholder="Department Id" formControlName="departmentId" readonly/>
+
+            <input placeholder="Department Name" formControlName="departmentName">
+
+            <input placeholder="Description" formControlName="description">
+
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="addDepartment.invalid">Submit</button>
+        </form>
+    </div>
+</div>

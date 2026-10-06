@@ -1,0 +1,50 @@
+
+<div class="page">
+    <div class="form-container">
+        <form [formGroup]="doctorForm" (ngSubmit)="submit()" class="form">
+
+            <input placeholder="Doctor Id" formControlName="doctorId" readonly/>
+
+            <input placeholder="fullName" formControlName="fullName">
+
+            <select formControlName="gender">
+                <option value="">Gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" placeholder="Date of Birth" formControlName="dateOfBirth">
+
+            <input placeholder="Age" formControlName="age" readonly>
+
+            <input placeholder="Mobile Number" formControlName="mobileNumber">
+
+            <input type="email" placeholder="Email" formControlName="email">
+
+            <!-- <input placeholder="Qualification" formControlName="qualification"> -->
+             <select formControlName="qualification">
+                <option value="">Select Qualification</option>
+                <option value="MBBS">MBBS</option>
+                <option value="MD">MD (General Medicine, Gynecology)</option>
+                <option value="MS">MS (ENT, Ophthalmology, Orthopedics)</option>
+                <option value="DM">DM (Cardiology)</option>
+             </select>
+            
+            <!-- <input placeholder="Specialization" formControlName="specialization"> -->
+            <select formControlName="specialization">
+                <option value="">Select Specialization</option>
+                <option value="General Medicine">General Medicine</option>
+                <option value="ENT">ENT</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Gynecology">Gynecology</option>
+                <option value="Ophthalmology">Ophthalmology</option>
+                <option value="Orthopedics">Orthopedics</option>
+            </select>
+
+            <input placeholder="Experience (years)" formControlName="experience" type="number" min="0">
+
+            <button type="submit" class="btn btn-primary submit-btn" [disabled]="doctorForm.invalid">Submit</button>
+        </form>
+    </div>
+</div>

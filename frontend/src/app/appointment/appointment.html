@@ -1,0 +1,81 @@
+<div class="table-page">
+
+  <div class="table-card">
+
+    <div class="header-row">
+      <h2>Appointment Dashboard</h2>
+      <button class="add-btn" (click)="addAppointment()">Add New Appointment</button>
+    </div>
+    
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Patient</th>
+          <th>Department</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Payment</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let a of paginatedAppointments; trackBy: trackById">
+
+          <td>{{ a.appointmentId }}</td>
+          <td>{{ a.patientName }}</td>
+          <td>{{ a.department }}</td>
+          <td>{{ a.doctor }}</td>
+          <td>{{ a.appointmentDate }}</td>
+          <td>{{ a.appointmentTime }}</td>
+
+          <!-- Status Badge -->
+          <td>
+            <span class="badge" [ngClass]="a.appointmentStatus.toLowerCase()">
+              {{ a.appointmentStatus }}
+            </span>
+          </td>
+
+          <!-- Payment Badge -->
+          <td>
+            <span class="badge" [ngClass]="a.paymentStatus.toLowerCase()">
+              {{ a.paymentStatus }}
+            </span>
+          </td>
+
+          <td>
+            <button class="view-btn" (click)="edit(a.id)">View</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="appointmentList.length === 0" class="empty">
+      No appointments found
+    </p>
+
+    <div class="pagination" *ngIf="appointmentList.length > 0">
+      <p class="pagination-summary">
+        Showing {{ startItem }}-{{ endItem }} of {{ appointmentList.length }} appointments
+      </p>
+      <div class="pagination-controls">
+        <button class="page-btn" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <button
+          class="page-btn page-number"
+          *ngFor="let page of pageNumbers"
+          (click)="goToPage(page)"
+          [class.active]="page === currentPage"
+        >
+          {{ page }}
+        </button>
+        <button class="page-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

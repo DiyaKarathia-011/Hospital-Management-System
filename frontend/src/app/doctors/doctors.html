@@ -1,0 +1,74 @@
+<!-- <router-outlet></router-outlet> -->
+
+<div class="table-page">
+  <div class="table-card">
+
+    <!-- FIXED HEADER -->
+    <div class="header-row">
+      <h2>Doctor List</h2>
+      <button class="add-btn" (click)="addDoctor()">Add New Doctor</button>
+    </div>
+
+    <!-- SCROLLABLE BODY -->
+    <div class="table-body">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Doctor ID</th>
+            <th>Full Name</th>
+            <th>Gender</th> 
+            <th>DOB</th>
+            <th>Age</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Qualification</th>
+            <th>Specialization</th>
+            <th>Exp</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let d of paginatedDoctors; trackBy: trackById">
+            <td>{{d.doctorId}}</td>
+            <td>{{d.fullName}}</td>
+            <td>{{d.gender}}</td>
+            <td>{{d.dateOfBirth}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.mobileNumber}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.qualification}}</td>
+            <td>{{d.specialization}}</td>
+            <td>{{d.experience}}</td>
+            <td>
+              <button class="view-btn" (click)="editDoctor(d.id)">View</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p *ngIf="doctorList.length === 0" class="empty">
+      No doctors found
+    </p>
+
+    <div class="pagination" *ngIf="doctorList.length > 0">
+      <p class="pagination-summary">
+        Showing {{ startItem }}-{{ endItem }} of {{ doctorList.length }} doctors
+      </p>
+      <div class="pagination-controls">
+        <button class="page-btn" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <button
+          class="page-btn page-number"
+          *ngFor="let page of pageNumbers"
+          (click)="goToPage(page)"
+          [class.active]="page === currentPage"
+        >
+          {{ page }}
+        </button>
+        <button class="page-btn" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+    </div>
+
+  </div>
+</div>
